@@ -1,0 +1,61 @@
+# COPYRIGHT 2017, KALEB WASMUTH.
+
+#This file is part of SimpleHG.
+
+#SimpleHG is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+
+#SimpleHG is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see http://www.gnu.org/licenses/.
+
+name: SimpleHG
+main: SimpleHG\Main
+version: 1.0.0
+api: [3.0.0-ALPHA4, 3.0.0-ALPHA5]
+author: Kaleb Wasmuth
+description: A Simple Hunger Games Plugin
+
+commands:
+ starthg:
+  description: Start a game
+  permission: simplehg.startgame
+  usage: /starthg
+ stophg:
+  description: Stop a game
+  permission: simplehg.stopgame
+  usage: /stophg
+ gettime:
+  description: Get the time remaining in a game countdown
+  permission: simplehg.seetime
+  usage: /gettime
+ joinhg:
+  description: Join a game
+  permission: simplehg.joingame
+  usage: /joinhg
+ leavehg:
+  description: Leave a game
+  permission: simplehg.seetime
+  usage: /leavehg
+
+permissions:
+ simplehg.createsign:
+  default: op
+ simplehg.deletesign:
+  default: op
+ simplehg.startgame:
+  default: op
+ simplehg.stopgame:
+  default: op
+ simplehg.joingame:
+  default: true
+ simplehg.leavegame:
+  default: true
+ simplehg.seetime:
+  default: true

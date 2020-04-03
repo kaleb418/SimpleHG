@@ -1,0 +1,152 @@
+# COPYRIGHT 2017, KALEB WASMUTH.
+
+#This file is part of SimpleHG.
+
+#SimpleHG is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+
+#SimpleHG is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see http://www.gnu.org/licenses/.
+
+# Enable/disable plugin
+enabled: true
+
+# Hunger games world name. This is the world that players will be TPd to when they join a game. Name of LEVEL, not WORLD FOLDER
+world: "world"
+
+# Minimum number of players until game can start
+min-players: 2
+
+# Maximum number of players in game (usually the number of spawn locations in the world)
+max-players: 4
+
+# Allow game to start after countdown even if minimum number of players hasn't been reached
+force-start: false
+
+# Countdown timer length integer (seconds). How long the joining period is between game creation and game start.
+starting-int: 60
+
+# Alert players at certain intervals during countdown, such as "Game will start in 30 seconds" etc
+alert-players: true
+
+# Intervals to alert players
+# Example: If alert-intervals: [30, 15] and starting-int: 60, alert will happen at 30 seconds and 15 seconds
+alert-intervals: [45, 30, 15, 5, 4, 3, 2, 1]
+
+# Force players into adventure or survival mode on game join. If both force-adventure and force-survival are true, force-adventure will take precedence.
+force-adventure: false
+force-survival: true
+
+# Player join game message. Use {player} to insert the player who joined. Set "" for no join message.
+player-join-message: "§e{player} joined the game.§r"
+
+# Player leave game message. Use {player} to insert the player who left. Set "" for no leave message.
+player-leave-message: "§e{player} left the game.§r"
+
+# Alert message. Use {time} to insert the remaining time in seconds
+alert-message: "§eGame will start in {time} seconds.§r"
+
+# Message sent to users at game start.
+game-start-message: "§bThe game has started! Good luck!§r"
+
+# Time (in seconds) that players will be invincible after game start. Set -1 to disable
+invincibility: 15
+
+# Allow players in a game to break blocks.
+player-break-block: false
+
+# Allow players in a game to place blocks.
+player-place-block: false
+
+# Death message. Use {victim} to insert the player who was killed, and {killer} to insert the player who did the killing. Set "" for no death message.
+# This message only broadcasts to those in the game.
+death-message: "§e{victim} has been slain by {killer}!§r"
+
+# Maximum player, cannot join message.
+max-players-error-message: "§cCannot join this game, maximum number of players reached!§r"
+
+# Game started, cannot join message.
+game-started-error-message: "§cCannot join this game, it has already started!§r"
+
+# Spawn location coordinates. Each location should be an array containing the x, y, z coordinates for that location.
+spawn-coords: [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+]
+
+# Allow player movement during timer countdown. Players will still be TPd to their spawn position on game start.
+allow-movement: false
+
+# Choose whether player chat is sent to everyone or only those in the game. If true, player chat is sent to everyone, else it is sent to the players in the game.
+player-chat: true
+
+# If false, chests won't be filled on game start.
+fill-chests: true
+
+# Chest coordinates. Each location should be an array containing the x, y, z coordinates for that location.
+chest-coords: [
+    [0, 0, 0],
+    [0, 0, 0]
+]
+
+# Each item should be an array that contains the item id, and the maximum amount of this item that a chest can have.
+# Examples:
+# [364, 3] -> Allows cooked steak (364) to possibly be put into a chest, anywhere from 1-3 cooked steaks
+# [262, 16] -> Allows arrows (262) to possibly be put into a chest, anywhere from 1-16 arrows (16)
+# Tip: You can add duplicate arrays with the same item id and amount to increase the chance of that item being selected, and therefore increase the rarity of other items.
+# Tip: Use ':' to separate item IDs from metadata, such as [1:1, 5]
+chest-contents: [
+# Example List
+    [367, 7],
+    [54, 1],
+    [357, 1],
+    [364, 3],
+    [272, 1],
+    [264, 1],
+    [262, 16],
+    [360, 7],
+    [360, 7],
+    [30, 4],
+    [352, 2],
+    [303, 1],
+    [304, 1],
+    [309, 1],
+    [265, 3]
+]
+
+# Minimum number of item stacks put into each chest on game start.
+# Tip: It is best practice to have this set to a number lower than the amount of items available in chest-contents.
+min-chest-contents: 2
+
+# Maximum number of item stacks put into each chest on game start.
+# Tip: It is best practice to have this set to a number higher than the amount of items available in chest-contents.
+max-chest-contents: 5
+
+# Winning player broadcast. Use {winner} to insert the winning player. Set "" for no winning message.
+winning-message: "§a{winner} has won the game!§r"
+
+# TP players to deathmatch after a certain time playing
+deathmatch: true
+
+# The number (in seconds) after the game start at which players will be teleported to the deathmatch
+deathmatch-countdown: 120
+
+# Message sent to players on TP to deathmatch. Set "" for no deathmatch message
+deathmatch-message: "§eWelcome to the Deathmatch! Good luck!§r"
+
+# Deathmatch coordinates
+deathmatch-coords: [0, 0, 0]
+
+# Force-end game after this number (in seconds). Set -1 to allow game to run indefinitely.
+force-end: 180
+
+# Force-end message. Set "" for no force-end message
+force-end-message: "§aThe game has ended! Thank you for playing!§r"
